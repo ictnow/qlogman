@@ -10,9 +10,7 @@ _**qlogman** is provided as-is and with no warranty of any form. It is up to you
 Requirements
 ============
 
-It should run on PowerShell 5.0 or greater. 
-
-It has been tested on MacOS X 10.13 running PowerShell 6.0.
+It should run on PowerShell 5.0 or greater. Tested on MacOS X 10.13 running PowerShell 6.0.
 
 Installation
 ============
@@ -26,7 +24,7 @@ The expected use case is to schedule qlogman in Task Scheduler so that it runs d
 
 qlogman.ps1 [-WhatIf] -LogPath _Folder Path Logs Reside In_ -LogMatch _Wildcard to match logs_ [ -CompressAfter [number of days] | -RemoveAfter [number of days] ]
 
--WhatIf allows you to do a dry run to see what qlogman will do
+-WhatIf will show you what qlogman will do with a given set of parameters without actually doing it
 
 CompressAfter and RemoveAfter can be specified together - for example, you could compress logs older than 7 days, and remove the compressed file after it is older than 30 days. Compressing a log preserves the LastWriteTime from the original log so the directory can be sorted.
 
