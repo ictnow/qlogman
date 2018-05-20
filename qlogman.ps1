@@ -49,7 +49,7 @@ Param (
   [String]$LogPath,
   [String]$LogMatch,
   [int]$CompressAfter,
-  [int]$RemoveAfter
+  [int]$RemoveAfter,
   [Switch]$WhatIf = $FALSE
 )
 
@@ -64,7 +64,9 @@ $logParameters = @{
 }
 
 try {
-  Invoke-LogManager @logParameters
+  Set-SuppliedParameters @logParameters
+  Confirm-SuppliedParameters
+  Invoke-LogManager
 } catch {
   if ($_.toString().StartsWith("ERROR:")) {
     Write-Output $_
