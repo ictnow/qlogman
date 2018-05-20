@@ -48,8 +48,8 @@
 Param (
   [String]$LogPath,
   [String]$LogMatch,
-  [int]$CompressAfter,
-  [int]$RemoveAfter,
+  [int]$CompressAfter = 0,
+  [int]$RemoveAfter = 0,
   [Switch]$WhatIf = $FALSE
 )
 
@@ -63,6 +63,21 @@ $logParameters = @{
   WhatIf = $WhatIf
 }
 
+Write-Output ":::qlogman (c) 2018 John Opitz //CTNow <opensource@ictnow.com.au>"
+Write-Output "Managing LogPath: $LogPath Matching Pattern $LogMatch"
+if ($CompressAfter -gt 0) {
+  Write-Output "CompressAfter: $CompressAfter days"
+}
+if ($RemoveAfter -gt 0)
+  Write-Output "RemoveAfter: $RemoveAfter days"
+}
+ 
+if ($WhatIf) {
+  Write-Output "... commencing simulation at: $(Get-Date)"
+} else {
+  Write-Output "... commencing run at: $(Get-Date)"
+}
+
 try {
   Set-SuppliedParameters @logParameters
   Confirm-SuppliedParameters
@@ -72,3 +87,5 @@ try {
     Write-Output $_
   }
 }
+
+Write-Output "... finished $(Get-Date)"
