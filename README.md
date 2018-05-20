@@ -1,6 +1,8 @@
 qlogman
 =======
 
+(c) 2018 John Opitz //CTNow <opensource@ictnow.com.au>
+
 The purpose of _qlogman_ is to remove, zip log files older than a certain number of days via the command line.
 Schedule daily via Scheduled Tasks to manage the size of directories which can grow uncontrollably due to log files being written - e.g. IIS C:\Inetpub
 
@@ -10,7 +12,10 @@ _**qlogman** is provided as-is and with no warranty of any form. It is up to you
 Requirements
 ============
 
-It should run on PowerShell 5.0 or greater. Tested on MacOS X 10.13 running PowerShell 6.0.
+It should run on PowerShell 5.0 or greater. 
+Tested on 
+Windows Server 2016 / PowerShell 5.0
+MacOS X 10.13 / PowerShell 6.0.
 
 Installation
 ============
