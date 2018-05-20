@@ -1,0 +1,5 @@
+# Testdata is regenerated as part of the step scripts
+# We don't want to include .log or .zip files in testdata directory in the repository
+*.log
+*.zip
+logdirectoryisfile
