@@ -68,7 +68,7 @@ Write-Output "Managing LogPath: $LogPath Matching Pattern $LogMatch"
 if ($CompressAfter -gt 0) {
   Write-Output "CompressAfter: $CompressAfter days"
 }
-if ($RemoveAfter -gt 0)
+if ($RemoveAfter -gt 0) {
   Write-Output "RemoveAfter: $RemoveAfter days"
 }
  
