@@ -60,7 +60,7 @@ $logParameters = @{
   LogMatch = $LogMatch
   CompressAfter = $CompressAfter
   RemoveAfter = $RemoveAfter
-  WhatIf = $FALSE
+  WhatIf = $WhatIf
 }
 
 try {
